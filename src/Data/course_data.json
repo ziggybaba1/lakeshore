@@ -1,0 +1,38 @@
+[
+    {
+        "title":"Clinical Laboratory",
+        "color":"#b02020",
+        "progress":45,
+        "image":"https://www.bangor.ac.uk/sites/default/files/styles/16x9_1100w/public/2020-07/shutterstock_502829518.jpg?h=62bd74a1&itok=t0OOG1wH"
+    },
+    {
+        "title":"Public Health",
+        "color":"#feff00",
+        "progress":69,
+        "image":"https://www.bangor.ac.uk/sites/default/files/styles/16x9_1100w/public/2020-07/shutterstock_400874527.jpg?h=2ecac5f7&itok=QFrZ-nnY"
+    },
+    {
+        "title":"Antenatal care",
+        "color":"#002668",
+        "progress":90,
+        "image":"https://static.vecteezy.com/system/resources/thumbnails/007/436/518/small/doctor-and-stethoscope-in-hand-touch-modern-medical-network-icon-maintaining-a-connected-virtual-network-3d-illustration-free-photo.jpg"
+    },
+    {
+        "title":"Clinical Laboratory",
+        "color":"#b02020",
+        "progress":45,
+        "image":"https://www.bangor.ac.uk/sites/default/files/styles/16x9_1100w/public/2020-07/shutterstock_502829518.jpg?h=62bd74a1&itok=t0OOG1wH"
+    },
+    {
+        "title":"Public Health",
+        "color":"#feff00",
+        "progress":69,
+        "image":"https://www.bangor.ac.uk/sites/default/files/styles/16x9_1100w/public/2020-07/shutterstock_400874527.jpg?h=2ecac5f7&itok=QFrZ-nnY"
+    },
+    {
+        "title":"Antenatal care",
+        "color":"#002668",
+        "progress":90,
+        "image":"https://static.vecteezy.com/system/resources/thumbnails/007/436/518/small/doctor-and-stethoscope-in-hand-touch-modern-medical-network-icon-maintaining-a-connected-virtual-network-3d-illustration-free-photo.jpg"
+    }
+]
