@@ -52,7 +52,7 @@ const Home = () => {
             />
           </span>
           <a>
-            <Brightness4 fontSize="medium" /> <b>Day Mode</b>{" "}
+            <Brightness4 fontSize="medium" /> <b>Night Mode</b>{" "}
           </a>
         </section>
         <section className="advert_section">
@@ -87,18 +87,22 @@ const Home = () => {
         </section>
         <section className="course_sectionhome">
           <div className="top_header">
-            <h3>Registered Courses</h3>
+            <h3>Active Courses</h3>
+            <Link to={"/courses"}>View All</Link>
           </div>
           <div className="course_container">
             {course_data.map((item, index) => {
               if(index < 3)
-              return <Link to="#" className="item_course">
+              return <Link to={'/courses/'+item.ref} className="item_course">
                 <img src={item.image} loading="lazy" />
                 <div className="bottom_label">
                   <span>{item.title}</span>
+                  <span className="duration">{item.status}/{item.section} sections</span>
                   <div className="progressContainer">
-                    <BorderLinearProgress variant="determinate" value={item.progress} />
+                    <BorderLinearProgress variant="determinate" value={(item.status/item.section)*100} />
+                   
                   </div>
+                 
                 </div>
               </Link>
             })}

@@ -20,7 +20,7 @@ function Sidebar(props) {
     <div className="sideMenu">
       <div className="logoContainer">
         <div className="logo">
-          <img src="./Logo.png" loading="lazy" />
+          <img src="/Logo.png" loading="lazy" />
           <span>Health Practitioner</span>
         </div>
         <button>
@@ -34,7 +34,7 @@ function Sidebar(props) {
             props.menu === "home" ? "menuList active" : "menuList"
           }`}
         >
-          <Dashboard fontSize="large" />
+          <Dashboard style={{marginTop:5}} fontSize="large" />
           <span>Dashboard</span>
         </Link>
         <Link
@@ -43,41 +43,37 @@ function Sidebar(props) {
             props.menu === "course" ? "menuList active" : "menuList"
           }`}
         >
-          <BookTwoTone fontSize="large" />
+          <BookTwoTone style={{marginTop:5}} fontSize="large" />
           <span>Courses</span>
         </Link>
         <div className="menuList">
-          <CalendarMonth fontSize="large" />
+          <CalendarMonth style={{marginTop:5}} fontSize="large" />
           <span>Calendar</span>
         </div>
         <div className="menuList">
-          <MailOutline fontSize="large" />
+          <MailOutline style={{marginTop:5}} fontSize="large" />
           <span>Inbox</span>
         </div>
         <div className="menuList">
-          <AccountCircle fontSize="large" />
+          <AccountCircle style={{marginTop:5}} fontSize="large" />
           <span>Account</span>
         </div>
       </div>
       <aside id="sidebar_nav" className="sidebar_nav">
         <div className="logoContainer">
-          <img src="./Logo.png" loading="lazy" />
+          <img src="/Logo.png" loading="lazy" />
           <span>Health Practitioner</span>
         </div>
         <div className="lineDiv" />
         <div className="menuContainer">
           <li className={`${props.menu === "home" ? "active" : ""}`}>
-            {props.menu === "home" && <div className="activeLine"></div>}
-            {props.menu !== "home" && <div className="Line"></div>}
-            <Link to={"/"} className="itemList">
+            <Link to={"/"} className={`${props.menu === "home" ? "itemList active" : "itemList"}`}>
               <Dashboard fontSize="large" />
               <span>Dashboard</span>
             </Link>
           </li>
           <li className={`${props.menu === "course" ? "active" : ""}`}>
-            {props.menu === "course" && <div className="activeLine"></div>}
-            {props.menu !== "course" && <div className="Line"></div>}
-            <Link to={"/courses"} className="itemList">
+            <Link to={"/courses"} className={`${props.menu === "course" ? "itemList active" : "itemList"}`}>
               <BookTwoTone fontSize="large" />
               <span>Courses</span>
             </Link>

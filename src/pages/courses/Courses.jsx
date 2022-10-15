@@ -8,6 +8,7 @@ import {
   Handshake,
   HandshakeRounded,
   Handyman,
+  OpenInNew,
 } from "@mui/icons-material";
 import LinearProgress, {
   linearProgressClasses,
@@ -20,6 +21,7 @@ import data_bar from "../../Data/bar_data.json";
 import data_pie from "../../Data/pie_chart.json";
 import course_data from "../../Data/course_data.json";
 import Rightbar from "../../components/rightbar/Rightbar";
+import { Link } from "react-router-dom";
 
 const Courses = () => {
   const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
@@ -45,9 +47,8 @@ const Courses = () => {
         <section className="top_section">
           <span>
             REGISTERED COURSES
-           
           </span>
-         
+         <Link>Explore Courses <OpenInNew /> </Link>
         </section>
         {/* <section className="advert_section">
           <div className="top_header">
@@ -70,17 +71,37 @@ const Courses = () => {
             <h3>Active Courses</h3>
           </div>
           <div className="course_container">
-            {course_data.map((item, index) => (
-              <div className="item_course">
+            {course_data.map((item, index) => {
+                if(index <3)
+             return <Link to={'/courses/'+item.ref} className="item_course">
                 <img src={item.image} loading="lazy" />
                 <div className="bottom_label">
                   <span>{item.title}</span>
+                  <span className="duration">{item.status}/{item.section} sections</span>
                   <div className="progressContainer">
-                    <BorderLinearProgress variant="determinate" value={item.progress} />
+                    <BorderLinearProgress variant="determinate" value={(item.status/item.section)*100} />
+                  </div>
+                </div>
+              </Link>
+            })}
+          </div>
+          <div className="top_header">
+            <h3>Completed Courses</h3>
+          </div>
+          <div className="course_container">
+            {course_data.map((item, index) => {
+                if(index > 2)
+                return <div className="item_course">
+                <img src={item.image} loading="lazy" />
+                <div className="bottom_label">
+                  <span>{item.title}</span>
+                  <span className="duration">{item.status}/{item.section} sections</span>
+                  <div className="progressContainer">
+                    <BorderLinearProgress variant="determinate" value={(item.status/item.section)*100} />
                   </div>
                 </div>
               </div>
-            ))}
+            })}
           </div>
         </section>
       </main>

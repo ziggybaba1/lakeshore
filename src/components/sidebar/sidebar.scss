@@ -53,14 +53,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 10px;
+        margin-top: 0px;
         color: #ffffff;
         cursor: pointer;
         text-decoration: none;
         &.active {
             justify-content: space-between;
-            background: #8689ef;
-            width: 65px;
+            background: #ffffff;
+            color: #201f1f;
+            // width: 65px;
             padding: 2px 2px 2px 2px;
             background-blend-mode: lighten;
           }
@@ -134,14 +135,16 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        color: #ffffff;
         align-items: center;
         cursor: pointer;
         &.active {
-          justify-content: space-between;
-          background: #545be8;
+          // justify-content: space-between;
+          background: #ffffff;
+          color: #201f1f;
           padding: 2px 0px 2px 0px;
           background-blend-mode: lighten;
-          margin-right: 5px;
+          margin-right: 0px;
         }
         &:hover {
           // justify-content: space-between;
@@ -149,22 +152,16 @@
           padding: 2px 0px 2px 0px;
           background-blend-mode: lighten;
         }
-        .activeLine {
-          width: 2.34px;
-          height: 60px;
-          background: #ffffff;
-        }
-        .Line {
-          width: 2.34px;
-          height: 60px;
-        }
         .itemList {
           display: flex;
           flex-direction: column;
           align-items: center;
           padding-right: 10px;
-          color: #ffffff;
+          color:#fff;
           text-decoration: none;
+          &.active{
+            color: #201f1f;
+          }
           span {
             font-style: normal;
             font-weight: 800;
